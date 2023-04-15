@@ -1,0 +1,25 @@
+install node.js, vs code & git bash
+
+vs code extensions -
+1.ES7+ React/Redux/React-Native snippets
+2.ESLint
+3.GitHub Pull Requests and Issues
+4.JavaScript (ES6) code snippets
+5.Prettier - Code formatter
+6.Live Share
+
+Open folder in VS code
+in terminal set git bach as terminal
+
+git init -- to initialized repository
+remove / before build & nodemodules in gitignore file
+rm -fr .git -- to remove git repository
+
+npx create-react-app frontend -- to create react frontend
+removed unnessary files from frontend
+
+createed backend folder
+installed -- nodemon, express, mongoose & dotenv in backend
+written code to connect db & server
+
+commit to github
