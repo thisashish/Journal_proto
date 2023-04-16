@@ -22,4 +22,14 @@ createed backend folder
 installed -- nodemon, express, mongoose & dotenv in backend
 written code to connect db & server
 
-commit to github
+commit to github --- basic frontend & backend
+
+created Home, Pagenotfound, signup & login route in app.js
+npm i react-router-dom
+in src created component & pages folder
+in components - Header.jsx
+in Pages - Home, Pagenotfound, Login & signup
+
+signup & login form ready
+usershema & otpschemas made
+signup & login route ready & start working
