@@ -1,5 +1,5 @@
 import React from 'react';
 
-export const Journal = () => {
-  return <div>Journal</div>;
+export const Journal = (child) => {
+  return <div>{child.user.username}</div>;
 };

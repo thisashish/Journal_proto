@@ -1,14 +1,16 @@
 //import
 const express = require('express');
-var jwt = require('jsonwebtoken');
+const jwt = require('jsonwebtoken');
 const User = require('../Schema/userschema');
 const router = express.Router();
 require('dotenv').config();
 const nodemailer = require('nodemailer');
-process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
 const bcrypt = require('bcrypt');
 const Otp = require('../Schema/otpschema');
 const cookies = require('cookie-parser');
+
+//use
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
 const app = express();
 app.use(cookies());
 let transporter = nodemailer.createTransport({
@@ -76,7 +78,10 @@ router.post('/signup', async (req, res) => {
 router.post('/otp', async (req, res) => {
   const user = await Otp.findOne({ email: req.body.formstate.email });
   if (req.body.otp == user.otp) {
-    var token = jwt.sign({ foo: req.body.formstate.email }, 'kk');
+    var token = jwt.sign(
+      { email: req.body.formstate.email },
+      process.env.JWTKEY
+    );
     bcrypt.hash(req.body.formstate.password, 15, async function (err, hash) {
       await User.insertMany({
         username: req.body.formstate.username,
@@ -118,6 +123,11 @@ router.post('/login', async (req, res) => {
   } else {
     res.send('email not registered');
   }
+});
+
+//get user data
+router.get('/userdata', async (req, res) => {
+  res.send(await User.findOne({ token: req.cookies.token }));
 });
 
 module.exports = router;
