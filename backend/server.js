@@ -6,6 +6,7 @@ const cookies = require('cookie-parser');
 //use
 const app = express();
 require('dotenv').config();
+
 app.use(cookies());
 app.use(express.json());
 //db & server connections

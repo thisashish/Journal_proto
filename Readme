@@ -18,7 +18,7 @@ rm -fr .git -- to remove git repository
 npx create-react-app frontend -- to create react frontend
 removed unnessary files from frontend
 
-createed backend folder
+created backend folder
 installed -- nodemon, express, mongoose & dotenv in backend
 written code to connect db & server
 
@@ -35,3 +35,19 @@ usershema & otpschemas made
 signup & login route ready & start working
 
 getting userdata & set protected route
+
+created plan & add plan route
+
+home
+login
+signup
+404
+term & con
+journal - anal, insert,
+help
+plan
+
+shahabaj773@gmail.com
+a
+
+https://chartink.com/screener

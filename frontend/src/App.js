@@ -36,6 +36,10 @@ function App() {
           path="/journal"
           element={user.length !== 0 ? <Journal user={user} /> : <Login />}
         />
+        <Route
+          path="/journal/plan/add"
+          element={user.length !== 0 ? <Journal user={user} /> : <Login />}
+        />
       </Routes>
     </BrowserRouter>
   );
